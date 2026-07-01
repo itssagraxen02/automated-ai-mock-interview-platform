@@ -1,0 +1,16 @@
+{
+  "name": "ai-mock-interview-platform",
+  "version": "1.0.0",
+  "description": "AI Mock Interview Platform — MERN + Fuzzy Logic (NeDB embedded, no MongoDB required)",
+  "scripts": {
+    "dev": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"cyan,green\" \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start",
+    "setup": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "seed": "cd backend && node seeder.js",
+    "start": "concurrently --names \"BACKEND,FRONTEND\" \"cd backend && node server.js\" \"cd frontend && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
